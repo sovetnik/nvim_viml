@@ -30,6 +30,7 @@ set autoread
 set autowriteall
 " write backup before overwriting file, and remove if successfully written
 set nobackup
+set noswapfile
 set writebackup
 "Start scrolling when we're 7 lines away from margins
 set scrolloff=7

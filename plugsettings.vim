@@ -5,6 +5,19 @@ nmap <silent> <leader><leader> :NERDTreeToggle<CR>
 "}}}
 
 " -----------------------------------------------------
+" Rails Mappings {{{
+" -----------------------------------------------------
+"  Alternate vertical
+nmap <silent> gi :AV<CR>
+"  Related vertical
+nmap <silent> go :RV<CR>
+"  Alternate gorizontal
+nmap <silent> gj :AS<CR>
+"  Related gorizontal
+nmap <silent> gk :RS<CR>
+"}}}
+"
+" -----------------------------------------------------
 " RuboCop Mappings {{{
 " -----------------------------------------------------
 nmap <silent> <leader>ra :RuboCop -a<CR>
@@ -14,7 +27,7 @@ nmap <silent> <leader>ra :RuboCop -a<CR>
 " Buffergator settings {{{
 " -----------------------------------------------------
 let g:buffergator_sort_regime = "mru"
-let g:buffergator_viewport_split_policy = "L"
+let g:buffergator_viewport_split_policy = "B"
 nmap <silent> <leader>b :BuffergatorToggle<CR>
 "}}}
 
