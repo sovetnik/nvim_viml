@@ -49,6 +49,15 @@ let g:lightline = {
       \ }
 "}}}
 
+function! LightLineMode()
+  if &filetype == "help"
+    return "HELP"
+  elseif &filetype =~ "NERD_tree_1"
+    return "NERD_Tree"
+  endif
+  return g:lightline#mode()
+endfunction
+
 " Mode function for Lightline statusline
 function! g:utils#lightLineMode() abort
   let l:fname = expand('%:t')
@@ -80,41 +89,12 @@ function! g:utils#lightLineFilename() abort
         \ ('' !=# l:fname ? l:fname : '[No Name]')
 endfunction
 
-
-" " -----------------------------------------------------
-" " Lightline settings {{{
-" " -----------------------------------------------------
-" let g:lightline = {
-"       \ 'colorscheme': 'wombat',
-"       \ 'active': {
-"       \   'left': [ [ 'mode', 'paste' ],
-"       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] ]
-"       \ },
-"       \ 'component_function': {
-"       \   'fugitive': 'LightLineFugitive',
-"       \   'readonly': 'LightLineReadonly',
-"       \   'modified': 'LightLineModified',
-"       \   'filename': 'LightLineFilename'
-"       \ },
-"       \ 'separator': { 'left': '', 'right': '' },
-"       \ 'subseparator': { 'left': '', 'right': '' }
-"       \ }
-
-function! LightLineMode()
-  if &filetype == "help"
-    return "HELP"
-  elseif &filetype =~ "NERD_tree"
-    return "NERD_Tree"
-  endif
-  return g:lightline#mode()
-endfunction
-
 function! LightLineReadonly()
   return &readonly ? '' : ''
 endfunction
 
 function! LightLineFugitive()
-  if &filetype == "help"
+  if &filetype == "help" || winwidth(0) < 70 
     return ""
   elseif exists('*fugitive#head')
     let branch = fugitive#head()
@@ -144,10 +124,6 @@ function! LightLineShortFilename()
   endif
   return LightLineFilename()
 endfunction
-
-" function! LightLineFugitive()
-"   return exists('*fugitive#head') ? fugitive#head() : ''
-" endfunction
 
 function! LightLineFilename()
   return ('' != LightLineReadonly() ? LightLineReadonly() . ' ' : '') .
