@@ -9,12 +9,18 @@ nmap <silent> <leader><leader> :NERDTreeToggle<CR>
 " -----------------------------------------------------
 "  Alternate vertical
 nmap <silent> gi :AV<CR>
-"  Related vertical
-nmap <silent> go :RV<CR>
 "  Alternate gorizontal
 nmap <silent> gj :AS<CR>
+"  Related vertical
+nmap <silent> go :RV<CR>
 "  Related gorizontal
 nmap <silent> gk :RS<CR>
+
+"  Find vertical
+nmap <silent> gy :vsplit<CR>gf
+"  Find gorizontal
+nmap <silent> gh :split<CR>gf
+
 "}}}
 "
 " -----------------------------------------------------
