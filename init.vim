@@ -122,3 +122,9 @@ source ~/.config/nvim/style.vim
 "  Plugin settings 
 " ====================================================
 source ~/.config/nvim/plugsettings.vim
+
+" ====================================================
+"  Switch keyboard layout in insert mode for Markdown 
+" ====================================================
+source ~/.config/nvim/switchkb.vim
+
