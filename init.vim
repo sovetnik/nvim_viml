@@ -50,6 +50,8 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround' 
 " fuzzy find file
 Plug 'ctrlpvim/ctrlp.vim' 
+" REPL for some Languages: Codi
+Plug 'metakirby5/codi.vim'
 "}}}
 
 
@@ -68,7 +70,15 @@ Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 "Adds a :RuboCop command, which accept rubocop cli args
 Plug 'ngmy/vim-rubocop'
+" Minitest syntax
+Plug 'sunaku/vim-ruby-minitest' 
 "}}}
+
+" -----------------------------------------------------
+" Fish shell {{{
+" -----------------------------------------------------
+" Support for editing fish scripts
+Plug 'dag/vim-fish'
 
 
 " -----------------------------------------------------
