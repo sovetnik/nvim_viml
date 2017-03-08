@@ -1,10 +1,12 @@
-
-
 " -----------------------------------------------------
 " Colorscheme settings {{{
 " -----------------------------------------------------
 
-colorscheme railscasts
+" colorscheme railscasts
+" set background=dark
+colorscheme moonshine
+
+hi Comment          ctermbg=NONE ctermfg=246 cterm=NONE
 " }}}
 
 

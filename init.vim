@@ -12,6 +12,8 @@ call plug#begin('~/.config/nvim/plugged')
 " Colorschemes {{{
 " -----------------------------------------------------
 Plug 'jpo/vim-railscasts-theme'
+Plug 'jordwalke/flatlandia'
+Plug 'KKPMW/moonshine-vim'
 "}}}
 
 " -----------------------------------------------------
@@ -75,11 +77,16 @@ Plug 'sunaku/vim-ruby-minitest'
 "}}}
 
 " -----------------------------------------------------
-" Fish shell {{{
+" Language highlight {{{
 " -----------------------------------------------------
 " Support for editing fish scripts
 Plug 'dag/vim-fish'
 
+" Support for editing fish scripts
+Plug 'ekalinin/Dockerfile.vim'
+
+" Support for nginx conf files
+Plug 'fatih/vim-nginx'
 
 " -----------------------------------------------------
 " Git integration {{{
