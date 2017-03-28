@@ -1,7 +1,10 @@
 " -----------------------------------------------------
-" Nerdtree Mappings {{{
+" Common Mappings {{{
 " -----------------------------------------------------
-nmap <silent> <leader><leader> :NERDTreeToggle<CR>
+"  Nerdtree
+nmap <silent> <leader>n :NERDTreeToggle<CR>
+" Merginal
+nmap <silent> <leader>m :MerginalToggle<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -26,7 +29,7 @@ nmap <silent> gh :split<CR>gf
 " -----------------------------------------------------
 " RuboCop Mappings {{{
 " -----------------------------------------------------
-nmap <silent> <leader>ra :RuboCop -a<CR>
+nmap <silent> <leader>a :RuboCop -a<CR>
 "}}}
 
 " -----------------------------------------------------

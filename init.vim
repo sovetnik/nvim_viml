@@ -93,6 +93,8 @@ Plug 'fatih/vim-nginx'
 " -----------------------------------------------------
 " Fugitive
 Plug 'tpope/vim-fugitive'
+" Merginal aims provide a nice inteface for dealing with Git branches
+Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git changes showed on line numbers
