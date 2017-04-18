@@ -29,6 +29,9 @@ Plug 'mhinz/vim-startify'
 Plug 'jeetsukumaran/vim-buffergator' 
 " adds filetype glyphs (icons) to other plugins
 " Plug 'ryanoasis/vim-devicons'
+" Add ranger
+Plug 'francoiscabrol/ranger.vim'
+Plug 'rbgrouleff/bclose.vim'
 "}}}
 
 " -----------------------------------------------------
@@ -36,6 +39,8 @@ Plug 'jeetsukumaran/vim-buffergator'
 " -----------------------------------------------------
 " Asynchronous maker and linter (needs linters to work)
 Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+" Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
+Plug 'skywind3000/asyncrun.vim'
 " Autocomplete
 Plug 'Shougo/deoplete.nvim'
 " Automatically closing pair stuff
@@ -54,6 +59,11 @@ Plug 'tpope/vim-surround'
 Plug 'ctrlpvim/ctrlp.vim' 
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
+" Test suite Runner
+Plug 'sovetnik/vim-minispec'
+" Plug 'skalnik/vim-vroom'
+" Plug 'janko-m/vim-test'
+" Plug 'janx/vim-rubytest'
 "}}}
 
 
@@ -63,7 +73,7 @@ Plug 'metakirby5/codi.vim'
 " Ruby support (plays nicely with tpope/rbenv-ctags)
 Plug 'vim-ruby/vim-ruby'
 " RI documentation for Ruby
-Plug 'danchoi/ri.vim'
+" Plug 'danchoi/ri.vim'
 " Slim syntax
 Plug 'slim-template/vim-slim'
 " Rails support (:A, :R, :Rmigration, :Rextract)
@@ -131,6 +141,16 @@ source ~/.config/nvim/style.vim
 "  Plugin settings 
 " ====================================================
 source ~/.config/nvim/plugsettings.vim
+
+" ====================================================
+"  Use Ranger as file browser
+" ====================================================
+source ~/.config/nvim/ranger.vim
+
+" ====================================================
+"  Minitest runner
+" ====================================================
+" source ~/.config/nvim/minispec.vim
 
 " ====================================================
 "  Switch keyboard layout in insert mode for Markdown 

@@ -5,6 +5,8 @@
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 " Merginal
 nmap <silent> <leader>m :MerginalToggle<CR>
+" Buffergator
+nmap <silent> <leader>b :BuffergatorToggle<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -23,12 +25,21 @@ nmap <silent> gk :RS<CR>
 nmap <silent> gy :vsplit<CR>gf
 "  Find gorizontal
 nmap <silent> gh :split<CR>gf
-
 "}}}
-"
+
+" -----------------------------------------------------
+" FuGITive Mappings {{{
+" -----------------------------------------------------
+" Git status in buffer
+nmap <silent> gs :Gstatus<CR>
+" Git versions of file (history of changes)
+nmap <silent> gv :Gitv!<CR>
+"}}}
+
 " -----------------------------------------------------
 " RuboCop Mappings {{{
 " -----------------------------------------------------
+let g:vimrubocop_keymap = 0
 nmap <silent> <leader>a :RuboCop -a<CR>
 "}}}
 
@@ -37,7 +48,10 @@ nmap <silent> <leader>a :RuboCop -a<CR>
 " -----------------------------------------------------
 let g:buffergator_sort_regime = "mru"
 let g:buffergator_viewport_split_policy = "B"
-nmap <silent> <leader>b :BuffergatorToggle<CR>
+let g:buffergator_autoupdate = 1
+let g:buffergator_show_full_directory_path = 0
+let g:buffergator_suppress_keymaps = 1
+nnoremap <silent> <Leader>b :BuffergatorToggle<CR>
 "}}}
 
 " -----------------------------------------------------

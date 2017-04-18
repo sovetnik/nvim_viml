@@ -29,6 +29,9 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
+" Close quickfix menu
+nnoremap <Leader>c :cclose<CR>
+
 " Open vertical split
 nnoremap <Leader>v <C-w>v
 
