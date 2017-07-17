@@ -5,6 +5,18 @@ let g:mapleader=","
 "}}}
 
 " -----------------------------------------------------
+" 1.1 Setting Navigation {{{
+" -----------------------------------------------------
+"  Netrw
+nmap <silent> <leader><leader> :Explore<CR>
+"  Nerdtree
+nmap <silent> <leader>n :NERDTreeToggle<CR>
+" CtrlPMRUFiles
+nmap <silent> <leader>m :CtrlPMRUFiles<CR>
+" Buffergator
+nmap <silent> <leader>b :BuffergatorToggle<CR>
+"}}}
+" -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
 " with Q key, help with F1, etc.
 " -----------------------------------------------------
@@ -23,8 +35,7 @@ nnoremap Q <NOP>
 " 3 Vim defaults overriding {{{
 " -----------------------------------------------------
 " Easier window navigation
-" since CTRL-h is Backspase in iTerm2, remap it
-nmap <BS> <C-w>h
+nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
@@ -55,6 +66,9 @@ xnoremap >  >gv
 
 " Quick save buffer
 nnoremap <leader>w :w<CR>
+
+" Re-edit file from buffer
+nnoremap <leader>e :e %<CR>
 
 " Keep the cursor in place while joining lines
 nnoremap J mzJ`z

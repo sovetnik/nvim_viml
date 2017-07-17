@@ -1,12 +1,13 @@
 " -----------------------------------------------------
 " Common Mappings {{{
 " -----------------------------------------------------
-"  Nerdtree
-nmap <silent> <leader>n :NERDTreeToggle<CR>
-" Merginal
-nmap <silent> <leader>m :MerginalToggle<CR>
-" Buffergator
-nmap <silent> <leader>b :BuffergatorToggle<CR>
+"  Netrw
+let g:netrw_altv          = 1
+let g:netrw_dirhistmax   = 100
+let g:netrw_fastbrowse    = 3
+let g:netrw_keepdir       = 0
+let g:netrw_liststyle     = 3
+let g:netrw_special_syntax= 1
 "}}}
 
 " -----------------------------------------------------

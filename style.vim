@@ -54,7 +54,7 @@ let g:lightline = {
 function! LightLineMode()
   if &filetype == "help"
     return "HELP"
-  elseif &filetype =~ "NERD_tree_1"
+  elseif &filetype =~ "NERD.*"
     return "NERD_Tree"
   endif
   return g:lightline#mode()

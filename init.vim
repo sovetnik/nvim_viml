@@ -17,6 +17,12 @@ Plug 'KKPMW/moonshine-vim'
 "}}}
 
 " -----------------------------------------------------
+" Time tracking {{{
+" -----------------------------------------------------
+Plug 'wakatime/vim-wakatime'
+"}}}
+
+" -----------------------------------------------------
 " Interface improving {{{
 " -----------------------------------------------------
 " Nerdtree file browser
@@ -30,8 +36,15 @@ Plug 'jeetsukumaran/vim-buffergator'
 " adds filetype glyphs (icons) to other plugins
 " Plug 'ryanoasis/vim-devicons'
 " Add ranger
-Plug 'francoiscabrol/ranger.vim'
+" Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
+"}}}
+
+" -----------------------------------------------------
+" Hanami plugins {{{
+" -----------------------------------------------------
+Plug 'sovetnik/vim-hanami'
+Plug 'sovetnik/vim-minispec'
 "}}}
 
 " -----------------------------------------------------
@@ -60,7 +73,6 @@ Plug 'ctrlpvim/ctrlp.vim'
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
 " Test suite Runner
-Plug 'sovetnik/vim-minispec'
 " Plug 'skalnik/vim-vroom'
 " Plug 'janko-m/vim-test'
 " Plug 'janx/vim-rubytest'
@@ -121,6 +133,7 @@ call plug#end()
 "  Autocommands
 " ====================================================
 autocmd BufWritePost *.rb Neomake rubocop
+autocmd BufRead /tmp/psql.edit.* set syntax=sql
 
 " ====================================================
 "  Basic settings 
@@ -145,7 +158,13 @@ source ~/.config/nvim/plugsettings.vim
 " ====================================================
 "  Use Ranger as file browser
 " ====================================================
-source ~/.config/nvim/ranger.vim
+" source ~/.config/nvim/ranger.vim
+
+" ====================================================
+"  Hanami helper
+" ====================================================
+let g:hanami_open_strategy = 'vsplit '
+" source ~/.config/nvim/hanami.vim
 
 " ====================================================
 "  Minitest runner
@@ -155,5 +174,5 @@ source ~/.config/nvim/ranger.vim
 " ====================================================
 "  Switch keyboard layout in insert mode for Markdown 
 " ====================================================
-source ~/.config/nvim/switchkb.vim
+" source ~/.config/nvim/switchkb.vim
 
