@@ -35,8 +35,6 @@ Plug 'mhinz/vim-startify'
 Plug 'jeetsukumaran/vim-buffergator' 
 " adds filetype glyphs (icons) to other plugins
 " Plug 'ryanoasis/vim-devicons'
-" Add ranger
-" Plug 'francoiscabrol/ranger.vim'
 Plug 'rbgrouleff/bclose.vim'
 "}}}
 
@@ -50,16 +48,20 @@ Plug 'sovetnik/vim-minispec'
 " -----------------------------------------------------
 " Language agnostic plugins {{{
 " -----------------------------------------------------
+" Asynchronous Lint Engine
+Plug 'w0rp/ale'
 " Asynchronous maker and linter (needs linters to work)
-Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+" Plug 'benekastah/neomake', { 'on': ['Neomake'] }
 " Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
 Plug 'skywind3000/asyncrun.vim'
 " Autocomplete
-Plug 'Shougo/deoplete.nvim'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
 " Snippet support (C-j)
 Plug 'SirVer/ultisnips'
+" Easy text exchange operator for Vim (cx)
+Plug 'tommcdo/vim-exchange'
 " Commenting support (gc)
 Plug 'tpope/vim-commentary'
 "[e and ]e exchange the current line with the one above or below
@@ -92,8 +94,6 @@ Plug 'slim-template/vim-slim'
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 " Bundler support (plays nicely with tpope/gem-ctags)
 Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
-"Adds a :RuboCop command, which accept rubocop cli args
-Plug 'ngmy/vim-rubocop'
 " Minitest syntax
 Plug 'sunaku/vim-ruby-minitest' 
 "}}}
@@ -132,7 +132,6 @@ call plug#end()
 " ====================================================
 "  Autocommands
 " ====================================================
-autocmd BufWritePost *.rb Neomake rubocop
 autocmd BufRead /tmp/psql.edit.* set syntax=sql
 
 " ====================================================
@@ -154,11 +153,6 @@ source ~/.config/nvim/style.vim
 "  Plugin settings 
 " ====================================================
 source ~/.config/nvim/plugsettings.vim
-
-" ====================================================
-"  Use Ranger as file browser
-" ====================================================
-" source ~/.config/nvim/ranger.vim
 
 " ====================================================
 "  Hanami helper

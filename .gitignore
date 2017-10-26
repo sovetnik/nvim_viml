@@ -13,3 +13,5 @@ old.vim
 hanami.vim
 
 minispec.vim
+
+.netrwbook

@@ -16,6 +16,40 @@ nmap <silent> <leader>m :CtrlPMRUFiles<CR>
 " Buffergator
 nmap <silent> <leader>b :BuffergatorToggle<CR>
 "}}}
+
+" -----------------------------------------------------
+" 1.2  Asynchronous Lint Engine settings {{{
+" -----------------------------------------------------
+"  ALE autofix (only for rubocop autocorrect)
+nmap <silent> <leader>a :ALEFix<CR>
+"}}}
+
+" -----------------------------------------------------
+" 1.3 Rails Mappings {{{
+" -----------------------------------------------------
+"  Alternate vertical
+nmap <silent> gi :AV<CR>
+"  Alternate gorizontal
+nmap <silent> gj :AS<CR>
+"  Related vertical
+nmap <silent> go :RV<CR>
+"  Related gorizontal
+nmap <silent> gk :RS<CR>
+"  Find vertical
+nmap <silent> gy :vsplit<CR>gf
+"  Find gorizontal
+nmap <silent> gh :split<CR>gf
+"}}}
+
+" -----------------------------------------------------
+" 1.4 FuGITive Mappings {{{
+" -----------------------------------------------------
+" Git status in buffer
+nmap <silent> gs :Gstatus<CR>
+" Git versions of file (history of changes)
+nmap <silent> gv :Gitv!<CR>
+"}}}
+
 " -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
 " with Q key, help with F1, etc.
@@ -39,6 +73,9 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
+
+" Exit from Insert mode (additional esc)
+imap jk <Esc>
 
 " Close quickfix menu
 nnoremap <Leader>c :cclose<CR>
