@@ -11,8 +11,8 @@ call plug#begin('~/.config/nvim/plugged')
 " -----------------------------------------------------
 " Colorschemes {{{
 " -----------------------------------------------------
-Plug 'jpo/vim-railscasts-theme'
-Plug 'jordwalke/flatlandia'
+" Plug 'jpo/vim-railscasts-theme'
+" Plug 'jordwalke/flatlandia'
 Plug 'KKPMW/moonshine-vim'
 "}}}
 
@@ -74,10 +74,13 @@ Plug 'tpope/vim-surround'
 Plug 'ctrlpvim/ctrlp.vim' 
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
+" Search Dash.app from Vim
+Plug 'rizzatti/dash.vim'
 " Test suite Runner
 " Plug 'skalnik/vim-vroom'
 " Plug 'janko-m/vim-test'
 " Plug 'janx/vim-rubytest'
+" Plug 'gabebw/vim-spec-runner'
 "}}}
 
 
@@ -101,6 +104,9 @@ Plug 'sunaku/vim-ruby-minitest'
 " -----------------------------------------------------
 " Language highlight {{{
 " -----------------------------------------------------
+"  Api Blueprint (apib)
+Plug 'kylef/apiblueprint.vim'
+
 " Support for editing fish scripts
 Plug 'dag/vim-fish'
 

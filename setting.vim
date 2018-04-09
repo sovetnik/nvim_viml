@@ -3,6 +3,8 @@
 " https://neovim.io/doc/user/vim_diff.html#nvim-option-defaults) {{{
 " ====================================================
 
+" set main language
+language en_US
 " change the terminal's title
 set title
 " Absolute number for active line, relative for others

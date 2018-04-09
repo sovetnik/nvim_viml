@@ -11,11 +11,14 @@ let g:netrw_special_syntax= 1
 
 " Nerdtree
 " enable line numbers
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers=1
-let NERDTreeShowBookmarks=1
+let NERDTreeShowBookmarks=0
 let NERDTreeQuitOnOpen = 1
-" let NERDTreeWinSize = 33
-" let NERDTreeWinPos = 'right'
+let NERDTreeWinSize = 60
+let NERDTreeWinPos = 'right'
+let NERDTreeAutoDeleteBuffer = 1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 "}}}
@@ -28,6 +31,12 @@ let g:ale_fixers = {
       \       'rubocop',
       \       'remove_trailing_lines',
       \   ],
+      \   'sql': [
+      \       'remove_trailing_lines',
+      \   ],
+      \   'yaml': [
+      \       'remove_trailing_lines',
+      \   ],
       \}
 let g:ale_sign_error = '❯❯'
 let g:ale_sign_warning = '❯'
@@ -38,10 +47,12 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 " Buffergator settings {{{
 " -----------------------------------------------------
 let g:buffergator_sort_regime = 'mru'
-let g:buffergator_viewport_split_policy = 'B'
+let g:buffergator_viewport_split_policy = 'L'
 let g:buffergator_autoupdate = 1
 let g:buffergator_show_full_directory_path = 0
 let g:buffergator_suppress_keymaps = 1
+let g:buffergator_hsplit_size = 30
+let g:buffergator_vsplit_size = 80
 "}}}
 
 " -----------------------------------------------------

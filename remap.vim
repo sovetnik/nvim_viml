@@ -21,7 +21,7 @@ nmap <silent> <leader>b :BuffergatorToggle<CR>
 " 1.2  Asynchronous Lint Engine settings {{{
 " -----------------------------------------------------
 "  ALE autofix (only for rubocop autocorrect)
-nmap <silent> <leader>a :ALEFix<CR>
+nmap <silent> <leader>f :ALEFix<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -49,6 +49,12 @@ nmap <silent> gs :Gstatus<CR>
 " Git versions of file (history of changes)
 nmap <silent> gv :Gitv!<CR>
 "}}}
+
+" -----------------------------------------------------
+" 1.5 Dash Mappings {{{
+" -----------------------------------------------------
+nmap <silent> <leader>d <Plug>DashSearch
+
 
 " -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
@@ -101,8 +107,11 @@ inoremap <C-u> <ESC>mzgUiw`za
 xnoremap <  <gv
 xnoremap >  >gv
 
-" Quick save buffer
+" Quick write buffer
 nnoremap <leader>w :w<CR>
+
+" Quick quit buffer
+nnoremap <leader>q :q<CR>
 
 " Re-edit file from buffer
 nnoremap <leader>e :e %<CR>
