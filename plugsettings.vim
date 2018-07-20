@@ -11,7 +11,7 @@ let g:netrw_special_syntax= 1
 
 " Nerdtree
 " enable line numbers
-let NERDTreeMinimalUI = 1
+let NERDTreeMinimalUI = 0
 let NERDTreeDirArrows = 1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowBookmarks=0

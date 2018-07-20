@@ -72,10 +72,16 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround' 
 " fuzzy find file
 Plug 'ctrlpvim/ctrlp.vim' 
+" Silver Search intergration (grep replacement)
+" Ensure that you have the_silver_searcher, or:
+" brew install the_silver_searcher
+Plug 'brookhong/ag.vim'
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim'
+" " REST client
+" Plug 'mattn/webapi-vim'
 " Test suite Runner
 " Plug 'skalnik/vim-vroom'
 " Plug 'janko-m/vim-test'
