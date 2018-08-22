@@ -9,8 +9,20 @@ let g:mapleader=","
 " -----------------------------------------------------
 "  Netrw
 nmap <silent> <leader><leader> :Explore<CR>
+
 "  Nerdtree
-nmap <silent> <leader>n :NERDTreeToggle<CR>
+fun! ToggleNERDTreeWithRefresh()
+  if(exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1)
+    :NERDTreeToggle 
+  else
+    :NERDTreeFind 
+  endif   
+  if(exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1)
+    call feedkeys("R")  
+  endif   
+endf 
+nmap <silent> <Leader>n :call ToggleNERDTreeWithRefresh()<cr> 
+
 " CtrlPMRUFiles
 nmap <silent> <leader>m :CtrlPMRUFiles<CR>
 " Buffergator
@@ -48,13 +60,14 @@ nmap <silent> gh :split<CR>gf
 nmap <silent> gs :Gstatus<CR>
 " Git versions of file (history of changes)
 nmap <silent> gv :Gitv!<CR>
+" Show what revision and author last modified each line of a file
+nmap <silent> gb :Gblame<CR>
 "}}}
 
 " -----------------------------------------------------
 " 1.5 Dash Mappings {{{
 " -----------------------------------------------------
 nmap <silent> <leader>d <Plug>DashSearch
-
 
 " -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
