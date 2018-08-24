@@ -76,6 +76,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Ensure that you have the_silver_searcher, or:
 " brew install the_silver_searcher
 Plug 'brookhong/ag.vim'
+Plug 'Chun-Yang/vim-action-ag'
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
 " Search Dash.app from Vim

@@ -21,6 +21,9 @@ let NERDTreeWinPos = 'right'
 let NERDTreeAutoDeleteBuffer = 1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
+
+" vim-action-ag
+let g:vim_action_ag_escape_chars = '#%.^$*+?()[{\\|'
 "}}}
 
 " -----------------------------------------------------

@@ -70,6 +70,14 @@ nmap <silent> gb :Gblame<CR>
 nmap <silent> <leader>d <Plug>DashSearch
 
 " -----------------------------------------------------
+" 1.5 Ag Actions {{{
+" -----------------------------------------------------
+" use * to search current word in normal mode
+nmap * <Plug>AgActionWord
+" use * to search selected text in visual mode
+vmap * <Plug>AgActionVisual
+
+" -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
 " with Q key, help with F1, etc.
 " -----------------------------------------------------
