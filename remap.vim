@@ -13,15 +13,16 @@ nmap <silent> <leader><leader> :Explore<CR>
 "  Nerdtree
 fun! ToggleNERDTreeWithRefresh()
   if(exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1)
-    :NERDTreeToggle 
+    :NERDTreeClose
   else
-    :NERDTreeFind 
+    :NERDTreeFind
   endif   
   if(exists('t:NERDTreeBufName') && bufwinnr(t:NERDTreeBufName) != -1)
     call feedkeys("R")  
   endif   
 endf 
 nmap <silent> <Leader>n :call ToggleNERDTreeWithRefresh()<cr> 
+nmap <silent> <Leader>N :NERDTreeToggle <cr> 
 
 " CtrlPMRUFiles
 nmap <silent> <leader>m :CtrlPMRUFiles<CR>

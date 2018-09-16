@@ -36,6 +36,8 @@ Plug 'jeetsukumaran/vim-buffergator'
 " adds filetype glyphs (icons) to other plugins
 " Plug 'ryanoasis/vim-devicons'
 Plug 'rbgrouleff/bclose.vim'
+" YAML, RAML, EYAML & SaltStack SLS folding
+Plug 'pedrohdz/vim-yaml-folds'
 "}}}
 
 " -----------------------------------------------------
@@ -88,8 +90,15 @@ Plug 'rizzatti/dash.vim'
 " Plug 'janko-m/vim-test'
 " Plug 'janx/vim-rubytest'
 " Plug 'gabebw/vim-spec-runner'
+" Plug 'thoughtbot/vim-rspec'
 "}}}
 
+" -----------------------------------------------------
+" HTML {{{
+" -----------------------------------------------------
+" Auto close (X)HTML tags
+Plug 'alvan/vim-closetag'
+"}}}
 
 " -----------------------------------------------------
 " Ruby / Rails {{{
