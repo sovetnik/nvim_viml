@@ -5,6 +5,7 @@ Simple and minimalistic neovim config for ruby development, mostly commented and
 ## Installation
 
 $ cd ~/.config
+
 $ git clone https://github.com/sovetnik/nvim.git
 
 
