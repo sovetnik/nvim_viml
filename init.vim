@@ -177,6 +177,11 @@ source ~/.config/nvim/style.vim
 source ~/.config/nvim/plugsettings.vim
 
 " ====================================================
+"  Swap buffers (Leader-z)
+" ====================================================
+source ~/.config/nvim/swapbuf.vim
+
+" ====================================================
 "  Hanami helper
 " ====================================================
 let g:hanami_open_strategy = 'vsplit '
