@@ -37,7 +37,7 @@ Plug 'jeetsukumaran/vim-buffergator'
 " Plug 'ryanoasis/vim-devicons'
 Plug 'rbgrouleff/bclose.vim'
 " YAML, RAML, EYAML & SaltStack SLS folding
-Plug 'pedrohdz/vim-yaml-folds'
+" Plug 'pedrohdz/vim-yaml-folds'
 "}}}
 
 " -----------------------------------------------------

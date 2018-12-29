@@ -35,6 +35,10 @@ let g:ale_fixers = {
       \       'remove_trailing_lines',
       \       'trim_whitespace'
       \   ],
+      \   'slim': [
+      \       'remove_trailing_lines',
+      \       'trim_whitespace'
+      \   ],
       \   'sql': [
       \       'remove_trailing_lines',
       \       'trim_whitespace'
@@ -58,7 +62,7 @@ let g:buffergator_autoupdate = 1
 let g:buffergator_show_full_directory_path = 0
 let g:buffergator_suppress_keymaps = 1
 let g:buffergator_hsplit_size = 30
-let g:buffergator_vsplit_size = 80
+let g:buffergator_vsplit_size = 50
 "}}}
 
 " -----------------------------------------------------
