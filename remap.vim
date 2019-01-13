@@ -96,6 +96,9 @@ nnoremap Q <NOP>
 " -----------------------------------------------------
 " 3 Vim defaults overriding {{{
 " -----------------------------------------------------
+" map ESC to exit terminal mode
+tnoremap <Esc> <C-\><C-n>
+
 " Easier window navigation
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j

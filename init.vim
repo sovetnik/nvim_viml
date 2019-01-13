@@ -83,6 +83,10 @@ Plug 'Chun-Yang/vim-action-ag'
 Plug 'metakirby5/codi.vim'
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim'
+
+" Make the yanked region apparent!
+Plug 'machakann/vim-highlightedyank'
+
 " " REST client
 " Plug 'mattn/webapi-vim'
 " Test suite Runner
