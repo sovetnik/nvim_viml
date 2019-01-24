@@ -37,9 +37,9 @@ let g:lightline = {
       \   'mode': 'LightLineMode',
       \   'modified': 'LightLineModified',
       \   'filename': 'LightLineShortFilename',
-      \   'filetype': 'utils#lightLineFiletype',
-      \   'fileformat': 'utils#lightLineFileformat',
-      \   'fileencoding': 'utils#lightLineFileencoding',
+      \   'filetype': 'LightLineFiletype',
+      \   'fileformat': 'LightLineFileformat',
+      \   'fileencoding': 'LightLineFileencoding',
       \   'fugitive': 'LightLineFugitive',
       \   'readonly': 'LightLineReadonly'
       \ },
@@ -61,7 +61,7 @@ function! LightLineMode()
 endfunction
 
 " Mode function for Lightline statusline
-function! g:utils#lightLineMode() abort
+function! LightLineMode() abort
   let l:fname = expand('%:t')
   return l:fname =~? 'NERD_tree' ? 'NT' :
         \ &filetype ==? 'unite' ? 'Unite' :
@@ -69,22 +69,22 @@ function! g:utils#lightLineMode() abort
 endfunction
 
 " File format function for Lightline statusline
-function! g:utils#lightLineFileformat() abort
+function! LightLineFileformat() abort
   return winwidth(0) > 70 ? &fileformat : ''
 endfunction
 
 " Filetype function for Lightline statusline
-function! g:utils#lightLineFiletype() abort
+function! LightLineFiletype() abort
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype : 'no ft') : ''
 endfunction
 
 " File encoding function for Lightline statusline
-function! g:utils#lightLineFileencoding() abort
+function! LightLineFileencoding() abort
   return winwidth(0) > 70 ? (strlen(&fileencoding) ? &fileencoding : &encoding) : ''
 endfunction
 
 " File name function for Lightline statusline
-function! g:utils#lightLineFilename() abort
+function! g:LightLineFilename() abort
   let l:fname = expand('%:t')
   return l:fname =~? 'NERD_tree' ? 'NERDTree' :
         \ &filetype ==? 'unite' ? g:unite#get_status_string() :
