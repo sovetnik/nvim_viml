@@ -71,7 +71,12 @@ nmap <silent> gb :Gblame<CR>
 nmap <silent> <leader>d <Plug>DashSearch
 
 " -----------------------------------------------------
-" 1.5 Ag Actions {{{
+" 1.6 Multitran Mappings {{{
+" -----------------------------------------------------
+nmap <silent> ?? :te translate <cword><CR><CR>
+
+" -----------------------------------------------------
+" 1.7 Ag Actions {{{
 " -----------------------------------------------------
 " use * to search current word in normal mode
 nmap * <Plug>AgActionWord
