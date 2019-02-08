@@ -9,6 +9,25 @@ colorscheme moonshine
 hi Comment          ctermbg=NONE ctermfg=246 cterm=NONE
 " }}}
 
+" -----------------------------------------------------
+" Signify settings {{{
+" -----------------------------------------------------
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '-'
+let g:signify_sign_delete_first_line = '^'
+let g:signify_sign_change            = '~'
+let g:signify_sign_changedelete      = g:signify_sign_change
+
+" highlight lines in Sy and vimdiff etc.)
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
+
+" highlight signs in Sy
+highlight SignifySignAdd    cterm=bold ctermbg=none ctermfg=119
+highlight SignifySignDelete cterm=bold ctermbg=none ctermfg=167
+highlight SignifySignChange cterm=bold ctermbg=none ctermfg=227
+" }}}
 
 " -----------------------------------------------------
 " 4.7 Lightline settings {{{
@@ -25,6 +44,10 @@ let g:lightline = {
       \             [ 'fugitive', 'readonly', 'filename', 'modified' ] 
       \           ],
       \   'right': [
+      \               [ 'linter_checking', 
+      \                 'linter_errors', 
+      \                 'linter_warnings', 
+      \                 'linter_ok' ],
       \               [ 'lineinfo' ],
       \               [ 'percent' ],
       \               [ 'filetype', 'fileencoding' ]
@@ -32,6 +55,12 @@ let g:lightline = {
       \ },
       \ 'component': {
       \   'readonly': '%{&filetype=="help"?"HELP":&readonly?"RO":""}'
+      \ },
+      \ 'component_expand': {
+      \  'linter_checking': 'lightline#ale#checking',
+      \  'linter_warnings': 'lightline#ale#warnings',
+      \  'linter_errors': 'lightline#ale#errors',
+      \  'linter_ok': 'lightline#ale#ok',
       \ },
       \ 'component_function': {
       \   'mode': 'LightLineMode',
@@ -43,13 +72,24 @@ let g:lightline = {
       \   'fugitive': 'LightLineFugitive',
       \   'readonly': 'LightLineReadonly'
       \ },
+      \ 'componenttype': {
+      \     'linter_checking': 'left',
+      \     'linter_warnings': 'warning',
+      \     'linter_errors': 'error',
+      \     'linter_ok': 'left',
+      \ },
       \ 'component_visible_condition': {
       \   'readonly': '(&readonly)'
       \ },
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
-"}}}
+
+" let g:lightline#ale#indicator_checking = "\uf110"
+let g:lightline#ale#indicator_checking = ''
+let g:lightline#ale#indicator_warnings = "\uf071"
+let g:lightline#ale#indicator_errors = "\uf05e"
+let g:lightline#ale#indicator_ok = "\uf00c"
 
 function! LightLineMode()
   if &filetype == "help"

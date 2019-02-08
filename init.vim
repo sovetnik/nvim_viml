@@ -29,6 +29,9 @@ Plug 'wakatime/vim-wakatime'
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
 " Lightline (simple status line)
 Plug 'itchyny/lightline.vim'
+" ALE indicator for the lightline
+Plug 'maximbaz/lightline-ale'
+
 " Adds start screen with cow
 Plug 'mhinz/vim-startify' 
 " ,b to show open buffers
@@ -40,6 +43,11 @@ Plug 'rbgrouleff/bclose.vim'
 " Plug 'pedrohdz/vim-yaml-folds'
 "}}}
 
+" -----------------------------------------------------
+" Autocomplete plugins {{{
+" -----------------------------------------------------
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+"}}}
 " -----------------------------------------------------
 " Hanami plugins {{{
 " -----------------------------------------------------
@@ -56,8 +64,6 @@ Plug 'w0rp/ale'
 " Plug 'benekastah/neomake', { 'on': ['Neomake'] }
 " Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
 Plug 'skywind3000/asyncrun.vim'
-" Autocomplete
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
 " Snippet support (C-j)
@@ -146,7 +152,7 @@ Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git changes showed on line numbers
-Plug 'airblade/vim-gitgutter'
+Plug 'mhinz/vim-signify'
 " plugin of NERDTree showing git status flags
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 "}}}
