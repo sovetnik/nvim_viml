@@ -30,6 +30,15 @@ let g:vim_action_ag_escape_chars = '#%.^$*+?()[{\\|'
 "  Asynchronous Lint Engine settings {{{
 " -----------------------------------------------------
 let g:ale_fixers = {
+      \   'javascript': [
+          \   'eslint', 
+          \   'prettier'
+      \   ],
+      \   'markdown': [
+      \       'prettier',
+      \       'textlint',
+      \       'remove_trailing_lines',
+      \       'trim_whitespace'
       \   'ruby': [
       \       'rubocop',
       \       'remove_trailing_lines',
