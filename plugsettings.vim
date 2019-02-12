@@ -22,6 +22,9 @@ let NERDTreeAutoDeleteBuffer = 1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 
+" Open fugitive gitdiff in vertical split
+set diffopt+=vertical
+
 " vim-action-ag
 let g:vim_action_ag_escape_chars = '#%.^$*+?()[{\\|'
 "}}}
@@ -29,6 +32,13 @@ let g:vim_action_ag_escape_chars = '#%.^$*+?()[{\\|'
 " -----------------------------------------------------
 "  Asynchronous Lint Engine settings {{{
 " -----------------------------------------------------
+"  defaults for autocomplete
+set completeopt=menu,menuone,preview,noselect,noinsert
+
+" let g:ale_linters = {
+"       \   'javascript': ['eslint', 'prettier'],
+"       \}
+
 let g:ale_fixers = {
       \   'javascript': [
           \   'eslint', 
@@ -58,9 +68,12 @@ let g:ale_fixers = {
       \       'trim_whitespace'
       \   ],
       \}
+
 let g:ale_sign_error = '❯❯'
 let g:ale_sign_warning = '❯'
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+" let g:ale_set_loclist = 0
+" let g:ale_set_quickfix = 1
 "}}}
 
 " -----------------------------------------------------

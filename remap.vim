@@ -58,7 +58,7 @@ nmap <silent> gh :split<CR>gf
 " 1.4 FuGITive Mappings {{{
 " -----------------------------------------------------
 " Git status in buffer
-nmap <silent> gs :Gstatus<CR>
+nmap <silent> gs :Gstatus<CR><C-W><S-H>
 " Git versions of file (history of changes)
 nmap <silent> gv :Gitv!<CR>
 " Show what revision and author last modified each line of a file

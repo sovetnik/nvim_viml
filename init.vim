@@ -37,7 +37,7 @@ Plug 'mhinz/vim-startify'
 " ,b to show open buffers
 Plug 'jeetsukumaran/vim-buffergator' 
 " adds filetype glyphs (icons) to other plugins
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'rbgrouleff/bclose.vim'
 " YAML, RAML, EYAML & SaltStack SLS folding
 " Plug 'pedrohdz/vim-yaml-folds'
@@ -47,12 +47,10 @@ Plug 'rbgrouleff/bclose.vim'
 " Autocomplete plugins {{{
 " -----------------------------------------------------
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-"}}}
-" -----------------------------------------------------
-" Hanami plugins {{{
-" -----------------------------------------------------
-Plug 'sovetnik/vim-hanami'
-Plug 'sovetnik/vim-minispec'
+" Plug 'uplus/deoplete-solargraph'
+" Plug 'fishbullet/deoplete-ruby'
+" Plug 'Shougo/neco-syntax'
+" Plug 'Shougo/neco-vim'
 "}}}
 
 " -----------------------------------------------------
@@ -61,9 +59,10 @@ Plug 'sovetnik/vim-minispec'
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
 " Asynchronous maker and linter (needs linters to work)
-" Plug 'benekastah/neomake', { 'on': ['Neomake'] }
+" Plug 'neomake/neomake'
+" Plug 'prabirshrestha/async.vim'
 " Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
-Plug 'skywind3000/asyncrun.vim'
+" Plug 'skywind3000/asyncrun.vim'
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
 " Snippet support (C-j)
@@ -95,12 +94,25 @@ Plug 'machakann/vim-highlightedyank'
 
 " " REST client
 " Plug 'mattn/webapi-vim'
+"}}}
+
+" -----------------------------------------------------
+" Test suite Runners {{{
+" -----------------------------------------------------
 " Test suite Runner
 " Plug 'skalnik/vim-vroom'
 " Plug 'janko-m/vim-test'
+" Plug 'reinh/vim-makegreen'
 " Plug 'janx/vim-rubytest'
 " Plug 'gabebw/vim-spec-runner'
 " Plug 'thoughtbot/vim-rspec'
+"}}}
+
+" -----------------------------------------------------
+" Hanami plugins {{{
+" -----------------------------------------------------
+Plug 'sovetnik/vim-hanami'
+Plug 'sovetnik/vim-minispec'
 "}}}
 
 " -----------------------------------------------------
@@ -152,6 +164,7 @@ Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git changes showed on line numbers
+" Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
 " plugin of NERDTree showing git status flags
 Plug 'Xuyuanp/nerdtree-git-plugin' 
@@ -165,6 +178,11 @@ call plug#end()
 "  Autocommands
 " ====================================================
 autocmd BufRead /tmp/psql.edit.* set syntax=sql
+autocmd FileType help wincmd L
+augroup PreviewAutocmds
+  autocmd!
+  autocmd WinEnter * if &previewwindow | wincmd L | endif
+augroup END
 
 " ====================================================
 "  Basic settings 
@@ -195,11 +213,12 @@ source ~/.config/nvim/swapbuf.vim
 "  Hanami helper
 " ====================================================
 let g:hanami_open_strategy = 'vsplit '
-" source ~/.config/nvim/hanami.vim
+" source ~/development/vim-hanami/plugin/hanami.vim
 
 " ====================================================
 "  Minitest runner
 " ====================================================
+" source ~/development/vim-minispec/plugin/minispec.vim
 " source ~/.config/nvim/minispec.vim
 
 " ====================================================
