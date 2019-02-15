@@ -178,7 +178,20 @@ call plug#end()
 "  Autocommands
 " ====================================================
 autocmd BufRead /tmp/psql.edit.* set syntax=sql
+
+"open help in right vsplit
 autocmd FileType help wincmd L
+
+augroup qf
+  " we don't want quickfix buffers to pop up when doing :bn or :bp
+  autocmd FileType qf set nobuflisted
+  " cursorline only in quickfix
+  autocmd FileType qf setlocal cursorline
+  " highlight only text, no background
+  autocmd FileType qf hi Search cterm=none ctermbg=none ctermfg=172 guibg=none
+augroup END
+
+"open preview in right vsplit
 augroup PreviewAutocmds
   autocmd!
   autocmd WinEnter * if &previewwindow | wincmd L | endif
