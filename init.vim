@@ -7,12 +7,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 " }}}
 
+" ALE completion must be set before load ALE
+" let g:ale_completion_enabled = 1
+
 call plug#begin('~/.config/nvim/plugged')
 " -----------------------------------------------------
 " Colorschemes {{{
 " -----------------------------------------------------
-" Plug 'jpo/vim-railscasts-theme'
-" Plug 'jordwalke/flatlandia'
 Plug 'KKPMW/moonshine-vim'
 "}}}
 
@@ -27,6 +28,7 @@ Plug 'wakatime/vim-wakatime'
 " -----------------------------------------------------
 " Nerdtree file browser
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
+
 " Lightline (simple status line)
 Plug 'itchyny/lightline.vim'
 " ALE indicator for the lightline
@@ -34,10 +36,10 @@ Plug 'maximbaz/lightline-ale'
 
 " Adds start screen with cow
 Plug 'mhinz/vim-startify' 
+
 " ,b to show open buffers
 Plug 'jeetsukumaran/vim-buffergator' 
-" adds filetype glyphs (icons) to other plugins
-Plug 'ryanoasis/vim-devicons'
+
 Plug 'rbgrouleff/bclose.vim'
 " YAML, RAML, EYAML & SaltStack SLS folding
 " Plug 'pedrohdz/vim-yaml-folds'
@@ -170,6 +172,11 @@ Plug 'mhinz/vim-signify'
 Plug 'Xuyuanp/nerdtree-git-plugin' 
 "}}}
 
+" adds filetype glyphs (icons) to other plugins
+" moved in end of plug to be sure it load after 
+" nerdtree, lightline & ctrlp
+" Plug 'ryanoasis/vim-devicons'
+
 call plug#end()
 "}}}
 
@@ -187,8 +194,6 @@ augroup qf
   autocmd FileType qf set nobuflisted
   " cursorline only in quickfix
   autocmd FileType qf setlocal cursorline
-  " highlight only text, no background
-  autocmd FileType qf hi Search cterm=none ctermbg=none ctermfg=172 guibg=none
 augroup END
 
 "open preview in right vsplit

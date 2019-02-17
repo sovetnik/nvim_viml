@@ -2,11 +2,31 @@
 " Colorscheme settings {{{
 " -----------------------------------------------------
 
-" colorscheme railscasts
-" set background=dark
 colorscheme moonshine
 
-hi Comment          ctermbg=NONE ctermfg=246 cterm=NONE
+""" Highlighting 
+hi Boolean ctermfg=104  cterm=NONE
+highlight Comment ctermfg=246 cterm=NONE
+
+" highlight only text, no background
+highlight Search cterm=none ctermbg=none ctermfg=225 guibg=none
+" Errors in QF and sign column
+hi Error ctermfg=196  cterm=none
+
+" highlight lines vimdiff
+highlight DiffAdd           cterm=bold ctermbg=none ctermfg=113
+highlight DiffDelete        cterm=bold ctermbg=none ctermfg=203
+highlight DiffChange        cterm=bold ctermbg=none ctermfg=208
+
+hi link diffBDiffer        WarningMsg
+hi link diffCommon         WarningMsg
+hi link diffDiffer         DiffChange
+hi link diffIdentical      WarningMsg
+hi link diffIsA            WarningMsg
+hi link diffNoEOL          WarningMsg
+hi link diffOnly           WarningMsg
+hi link diffRemoved        DiffDelete
+hi link diffAdded          DiffAdd
 " }}}
 
 " -----------------------------------------------------
@@ -18,20 +38,19 @@ let g:signify_sign_delete_first_line = '^'
 let g:signify_sign_change            = '~'
 let g:signify_sign_changedelete      = g:signify_sign_change
 
-" highlight lines in Sy and vimdiff etc.)
-highlight DiffAdd           cterm=bold ctermbg=none ctermfg=119
-highlight DiffDelete        cterm=bold ctermbg=none ctermfg=167
-highlight DiffChange        cterm=bold ctermbg=none ctermfg=227
-
 " highlight signs in Sy
-highlight SignifySignAdd    cterm=bold ctermbg=none ctermfg=119
-highlight SignifySignDelete cterm=bold ctermbg=none ctermfg=167
-highlight SignifySignChange cterm=bold ctermbg=none ctermfg=227
+highlight SignifySignAdd    cterm=bold ctermbg=none ctermfg=113
+highlight SignifySignDelete cterm=bold ctermbg=none ctermfg=203
+highlight SignifySignChange cterm=bold ctermbg=none ctermfg=220
 " }}}
 
 " -----------------------------------------------------
-" 4.7 Lightline settings {{{
+" Lightline settings {{{
 " -----------------------------------------------------
+" disable -- INSERT / NORMAL -- message, 
+" because the mode information is displayed in the statusline. 
+set noshowmode
+
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'tab': {
