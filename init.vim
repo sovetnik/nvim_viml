@@ -161,6 +161,8 @@ Plug 'fatih/vim-nginx'
 " -----------------------------------------------------
 " Fugitive
 Plug 'tpope/vim-fugitive'
+" GitHub extension for fugitive.vim
+Plug 'tpope/vim-rhubarb'
 " Merginal aims provide a nice inteface for dealing with Git branches
 Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
