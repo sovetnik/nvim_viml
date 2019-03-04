@@ -147,6 +147,9 @@ Plug 'sunaku/vim-ruby-minitest'
 "  Api Blueprint (apib)
 Plug 'kylef/apiblueprint.vim'
 
+" Vue.js component
+Plug 'posva/vim-vue'
+
 " Support for editing fish scripts
 Plug 'dag/vim-fish'
 
