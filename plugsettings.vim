@@ -41,8 +41,8 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 let g:ale_fixers = {
       \   'javascript': [
-          \   'eslint', 
-          \   'prettier'
+      \       'eslint', 
+      \       'prettier'
       \   ],
       \   'markdown': [
       \       'prettier',
@@ -62,6 +62,10 @@ let g:ale_fixers = {
       \   'sql': [
       \       'remove_trailing_lines',
       \       'trim_whitespace'
+      \   ],
+      \   'vue': [
+      \       'eslint', 
+      \       'prettier'
       \   ],
       \   'yaml': [
       \       'remove_trailing_lines',
@@ -99,3 +103,16 @@ let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
 let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
 let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
 " }}}
+
+" -----------------------------------------------------
+"  Closetag(HTML) settings {{{
+" -----------------------------------------------------
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.vue'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml,vue'

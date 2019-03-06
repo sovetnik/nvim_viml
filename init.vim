@@ -147,6 +147,9 @@ Plug 'sunaku/vim-ruby-minitest'
 "  Api Blueprint (apib)
 Plug 'kylef/apiblueprint.vim'
 
+" JavaScript
+Plug 'pangloss/vim-javascript'
+
 " Vue.js component
 Plug 'posva/vim-vue'
 
