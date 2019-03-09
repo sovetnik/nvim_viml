@@ -60,34 +60,46 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 " -----------------------------------------------------
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
+
 " Asynchronous maker and linter (needs linters to work)
 " Plug 'neomake/neomake'
 " Plug 'prabirshrestha/async.vim'
 " Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
 " Plug 'skywind3000/asyncrun.vim'
+
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
+
 " Snippet support (C-j)
 Plug 'SirVer/ultisnips'
+
 " Easy text exchange operator for Vim (cx)
 Plug 'tommcdo/vim-exchange'
+
 " Commenting support (gc)
 Plug 'tpope/vim-commentary'
+
 "[e and ]e exchange the current line with the one above or below
 Plug 'tpope/vim-unimpaired' 
+
 " dot repeat last command
 Plug 'tpope/vim-repeat' 
+
 " quoting/parenthesizing made simple
 Plug 'tpope/vim-surround' 
+
 " fuzzy find file
 Plug 'ctrlpvim/ctrlp.vim' 
+
 " Silver Search intergration (grep replacement)
 " Ensure that you have the_silver_searcher, or:
 " brew install the_silver_searcher
 Plug 'brookhong/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
+
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'
+
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim'
 
@@ -95,7 +107,8 @@ Plug 'rizzatti/dash.vim'
 Plug 'machakann/vim-highlightedyank'
 
 " " REST client
-" Plug 'mattn/webapi-vim'
+Plug 'baverman/vial'
+Plug 'baverman/vial-http'
 "}}}
 
 " -----------------------------------------------------
