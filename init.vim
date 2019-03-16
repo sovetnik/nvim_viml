@@ -160,6 +160,9 @@ Plug 'sunaku/vim-ruby-minitest'
 "  Api Blueprint (apib)
 Plug 'kylef/apiblueprint.vim'
 
+" CoffeeScript (js)
+Plug 'kchmck/vim-coffee-script'
+
 " JavaScript
 Plug 'pangloss/vim-javascript'
 
