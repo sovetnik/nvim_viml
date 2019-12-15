@@ -7,6 +7,10 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 " }}}
 
+if !has('nvim')
+    Plug 'rhysd/vim-healthcheck'
+endif
+
 " ALE completion must be set before load ALE
 " let g:ale_completion_enabled = 1
 
@@ -69,9 +73,6 @@ Plug 'w0rp/ale'
 
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
-
-" Snippet support (C-j)
-Plug 'SirVer/ultisnips'
 
 " Easy text exchange operator for Vim (cx)
 Plug 'tommcdo/vim-exchange'
@@ -138,6 +139,16 @@ Plug 'alvan/vim-closetag'
 "}}}
 
 " -----------------------------------------------------
+" Snippets {{{
+" -----------------------------------------------------
+" Track the engine.
+Plug 'SirVer/ultisnips'
+
+" Snippets are separated from the engine. Add this if you want them:
+Plug 'honza/vim-snippets'
+"}}}
+
+" -----------------------------------------------------
 " Ruby / Rails {{{
 " -----------------------------------------------------
 " Ruby support (plays nicely with tpope/rbenv-ctags)
@@ -186,7 +197,7 @@ Plug 'tpope/vim-fugitive'
 " GitHub extension for fugitive.vim
 Plug 'tpope/vim-rhubarb'
 " Merginal aims provide a nice inteface for dealing with Git branches
-Plug 'idanarye/vim-merginal'
+" Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
 Plug 'gregsexton/gitv', { 'on': 'Gitv' }
 " Git changes showed on line numbers
@@ -225,6 +236,18 @@ augroup PreviewAutocmds
   autocmd!
   autocmd WinEnter * if &previewwindow | wincmd L | endif
 augroup END
+
+" augroup VialHttpSettings
+"     au!
+"     au BufNewFile __vial_http__ nnoremap <buffer> <silent> <}> :b __vial_http_req__<cr>
+"     au BufNewFile __vial_http__ nnoremap <buffer> <silent> <{> :b __vial_http_raw__<cr>
+"     au BufNewFile __vial_http_req__ nnoremap <buffer> <silent> <}> :b __vial_http_hdr__<cr>
+"     au BufNewFile __vial_http_req__ nnoremap <buffer> <silent> <{> :b __vial_http__<cr>
+"     au BufNewFile __vial_http_hdr__ nnoremap <buffer> <silent> <}> :b __vial_http_raw__<cr>
+"     au BufNewFile __vial_http_hdr__ nnoremap <buffer> <silent> <{> :b __vial_http_req__<cr>
+"     au BufNewFile __vial_http_raw__ nnoremap <buffer> <silent> <}> :b __vial_http__<cr>
+"     au BufNewFile __vial_http_raw__ nnoremap <buffer> <silent> <{> :b __vial_http_hdr__<cr>
+" augroup END
 
 " ====================================================
 "  Basic settings 

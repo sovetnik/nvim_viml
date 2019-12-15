@@ -40,6 +40,8 @@ nmap <silent> <leader>f :ALEFix<CR>
 " -----------------------------------------------------
 " 1.3 Rails Mappings {{{
 " -----------------------------------------------------
+"  Runner (run RSpec)
+nmap <silent> <leader>a :Runner<CR>
 "  Alternate vertical
 nmap <silent> gi :AV<CR>
 "  Alternate gorizontal
