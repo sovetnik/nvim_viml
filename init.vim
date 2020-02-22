@@ -146,6 +146,9 @@ Plug 'SirVer/ultisnips'
 
 " Snippets are separated from the engine. Add this if you want them:
 Plug 'honza/vim-snippets'
+
+" provides support for expanding abbreviations similar to emmet
+Plug 'mattn/emmet-vim'
 "}}}
 
 " -----------------------------------------------------
@@ -173,6 +176,9 @@ Plug 'kylef/apiblueprint.vim'
 
 " CoffeeScript (js)
 Plug 'kchmck/vim-coffee-script'
+
+" Preview colours in source code while editing
+Plug 'ap/vim-css-color'
 
 " JavaScript
 Plug 'pangloss/vim-javascript'
