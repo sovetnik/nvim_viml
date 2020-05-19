@@ -96,12 +96,15 @@ let g:buffergator_vsplit_size = 50
 " Deoplete autocomplete settings {{{
 " -----------------------------------------------------
 let g:deoplete#enable_at_startup=1
-let g:deoplete#enable_refresh_always=0
-let g:deoplete#file#enable_buffer_path=1
-let g:deoplete#sources={}
-let g:deoplete#sources._    = ['buffer', 'file', 'ultisnips']
-let g:deoplete#sources.ruby = ['buffer', 'member', 'file', 'ultisnips']
-let g:deoplete#sources.vim  = ['buffer', 'member', 'file', 'ultisnips']
+call deoplete#custom#option('refresh_always', v:false)
+call deoplete#custom#source('_', 'buffer', 'file', 'ultisnips')
+call deoplete#custom#source('ruby', 'buffer', 'member', 'file', 'ultisnips')
+call deoplete#custom#source('vim', 'buffer', 'member', 'file', 'ultisnips')
+" }}}
+
+" -----------------------------------------------------
+" Snippets {{{
+" -----------------------------------------------------
 " }}}
 
 " -----------------------------------------------------
