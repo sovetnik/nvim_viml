@@ -125,6 +125,13 @@ Plug 'baverman/vial-http'
 "}}}
 
 " -----------------------------------------------------
+" Elixir plugins {{{
+" -----------------------------------------------------
+Plug 'elixir-editors/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+"}}}
+
+" -----------------------------------------------------
 " Hanami plugins {{{
 " -----------------------------------------------------
 Plug 'sovetnik/vim-hanami'
