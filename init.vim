@@ -95,8 +95,8 @@ Plug 'ctrlpvim/ctrlp.vim'
 " Silver Search intergration (grep replacement)
 " Ensure that you have the_silver_searcher, or:
 " brew install the_silver_searcher
-Plug 'brookhong/ag.vim'
-Plug 'Chun-Yang/vim-action-ag'
+" Plug 'gabesoft/vim-ags'
+Plug 'dyng/ctrlsf.vim'
 
 " REPL for some Languages: Codi
 Plug 'metakirby5/codi.vim'

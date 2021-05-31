@@ -25,8 +25,14 @@ autocmd FileType nerdtree setlocal relativenumber
 " Open fugitive gitdiff in vertical split
 set diffopt+=vertical
 
-" vim-action-ag
-let g:vim_action_ag_escape_chars = '#%.^$*+?()[{\\|'
+" CtrlSF settings
+let g:ctrlsf_auto_focus = {
+    \ "at": "done",
+    \ "duration_less_than": 1000
+    \ }
+let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_search_mode = 'async'
+
 "}}}
 
 " -----------------------------------------------------

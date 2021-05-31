@@ -81,9 +81,16 @@ nmap <silent> ?? :te translate <cword><CR><CR>
 " 1.7 Ag Actions {{{
 " -----------------------------------------------------
 " use * to search current word in normal mode
-nmap * <Plug>AgActionWord
+nmap \ <Plug>CtrlSFPrompt
+nmap * <Plug>CtrlSFCwordExec
 " use * to search selected text in visual mode
-vmap * <Plug>AgActionVisual
+vmap * <Plug>CtrlSFVwordExec
+
+" use * to search current word in normal mode
+" nnoremap * :Ags<Space><C-R>=expand('<cword>')<CR><CR>
+" use * to search selected text in visual mode
+" vnoremap  * y:Ags<Space><C-R>='"' . escape(@", '"*?()[]{}.') . '"'<CR><CR>
+
 
 " -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{
