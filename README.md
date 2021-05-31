@@ -4,9 +4,8 @@ Simple and minimalistic neovim config for ruby development, mostly commented and
 
 ## Installation
 
-$ cd ~/.config
-
-$ git clone https://github.com/sovetnik/nvim.git
+    $ cd ~/.config
+    $ git clone https://github.com/sovetnik/nvim.git
 
 
 ## Requirements for Deoplete:
@@ -24,8 +23,7 @@ You need update neovim-python module.
     $ pip3 install --upgrade neovim
 
 If you want to read the Neovim-python/python3 interface install documentation,
-you should read `:help provider-python` and the Wiki.
-https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim
+you should read `:help provider-python` and the [Wiki] (https://github.com/zchee/deoplete-jedi/wiki/Setting-up-Python-for-Neovim)
 
 ## Ruby bindings for [Neovim](https://github.com/neovim/neovim).
 
