@@ -1,5 +1,4 @@
-" Plugin manager (Plug) settings
-" Autoinstall {{{
+" Plugin manager (Plug) settings Autoinstall {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -76,6 +75,9 @@ Plug 'cohama/lexima.vim'
 
 " Easy text exchange operator for Vim (cx)
 Plug 'tommcdo/vim-exchange'
+
+" easily search for, substitute, and abbreviate multiple variants of a word
+Plug 'tpope/vim-abolish'
 
 " Commenting support (gc)
 Plug 'tpope/vim-commentary'
