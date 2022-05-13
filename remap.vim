@@ -60,11 +60,11 @@ nmap <silent> gh :split<CR>gf
 " 1.4 FuGITive Mappings {{{
 " -----------------------------------------------------
 " Git status in buffer
-nmap <silent> gs :Gstatus<CR><C-W><S-H>
+nmap <silent> gs :Git<CR><C-W><S-H>
 " Git versions of file (history of changes)
 nmap <silent> gv :Gitv!<CR>
 " Show what revision and author last modified each line of a file
-nmap <silent> gb :Gblame<CR>
+nmap <silent> gb :Git blame<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -147,7 +147,7 @@ xnoremap <  <gv
 xnoremap >  >gv
 
 " Quick write buffer
-nnoremap <leader>w :w<CR>
+nnoremap <leader>w :ALEFix<CR>:w<CR>
 
 " Quick quit buffer
 nnoremap <leader>q :q<CR>

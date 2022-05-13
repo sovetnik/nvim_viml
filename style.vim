@@ -157,8 +157,8 @@ endfunction
 function! LightLineFugitive()
   if &filetype == "help" || winwidth(0) < 70 
     return ""
-  elseif exists('*fugitive#head')
-    let branch = fugitive#head()
+  elseif exists('*FugitiveHead')
+    let branch = FugitiveHead()
     return branch !=# '' ? ''.branch : ''
   endif
   return ''

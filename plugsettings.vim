@@ -32,6 +32,7 @@ let g:ctrlsf_auto_focus = {
     \ }
 let g:ctrlsf_default_view_mode = 'compact'
 let g:ctrlsf_search_mode = 'async'
+let g:ctrlsf_populate_qflist = 1
 
 "}}}
 
@@ -42,10 +43,13 @@ let g:ctrlsf_search_mode = 'async'
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " let g:ale_linters = {
-"       \   'javascript': ['eslint', 'prettier'],
+"       \   'elixir': ['credo']
 "       \}
 
 let g:ale_fixers = {
+      \   'elixir': [
+      \       'mix_format', 
+      \   ],
       \   'javascript': [
       \       'eslint', 
       \       'prettier'

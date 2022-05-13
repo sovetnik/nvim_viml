@@ -89,6 +89,9 @@ Plug 'tpope/vim-repeat'
 " quoting/parenthesizing made simple
 Plug 'tpope/vim-surround' 
 
+" In project navigation
+Plug 'tpope/vim-projectionist'
+
 " fuzzy find file
 Plug 'ctrlpvim/ctrlp.vim' 
 
@@ -122,6 +125,7 @@ Plug 'baverman/vial-http'
 " Plug 'janx/vim-rubytest'
 " Plug 'gabebw/vim-spec-runner'
 " Plug 'thoughtbot/vim-rspec'
+Plug 'vim-test/vim-test'
 "}}}
 
 " -----------------------------------------------------
@@ -129,6 +133,7 @@ Plug 'baverman/vial-http'
 " -----------------------------------------------------
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
+Plug 'avdgaag/vim-phoenix'
 "}}}
 
 " -----------------------------------------------------
