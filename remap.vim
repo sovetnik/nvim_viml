@@ -38,22 +38,12 @@ nmap <silent> <leader>f :ALEFix<CR>
 "}}}
 
 " -----------------------------------------------------
-" 1.3 Rails Mappings {{{
+" 1.3 Test Mappings {{{
 " -----------------------------------------------------
-"  Runner (run RSpec)
-nmap <silent> <leader>a :Runner<CR>
-"  Alternate vertical
-nmap <silent> gi :AV<CR>
-"  Alternate gorizontal
-nmap <silent> gj :AS<CR>
-"  Related vertical
-nmap <silent> go :RV<CR>
-"  Related gorizontal
-nmap <silent> gk :RS<CR>
-"  Find vertical
-nmap <silent> gy :vsplit<CR>gf
-"  Find gorizontal
-nmap <silent> gh :split<CR>gf
+"  Vim test
+nmap <silent> <leader>r :TestNearest<CR>
+nmap <silent> <leader>t :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
 "}}}
 
 " -----------------------------------------------------
@@ -65,6 +55,8 @@ nmap <silent> gs :Git<CR><C-W><S-H>
 nmap <silent> gv :Gitv!<CR>
 " Show what revision and author last modified each line of a file
 nmap <silent> gb :Git blame<CR>
+nmap <silent> go :GBrowse<CR>
+
 "}}}
 
 " -----------------------------------------------------
@@ -75,7 +67,7 @@ nmap <silent> <leader>d <Plug>DashSearch
 " -----------------------------------------------------
 " 1.6 Multitran Mappings {{{
 " -----------------------------------------------------
-nmap <silent> ?? :te translate <cword><CR><CR>
+" nmap <silent> ?? :te translate <cword><CR><CR>
 
 " -----------------------------------------------------
 " 1.7 Ag Actions {{{
@@ -86,11 +78,22 @@ nmap * <Plug>CtrlSFCwordExec
 " use * to search selected text in visual mode
 vmap * <Plug>CtrlSFVwordExec
 
-" use * to search current word in normal mode
-" nnoremap * :Ags<Space><C-R>=expand('<cword>')<CR><CR>
-" use * to search selected text in visual mode
-" vnoremap  * y:Ags<Space><C-R>='"' . escape(@", '"*?()[]{}.') . '"'<CR><CR>
-
+" -----------------------------------------------------
+" 1.8 Rails Mappings {{{
+" -----------------------------------------------------
+"  Alternate vertical
+nmap <silent> gi :AV<CR>
+"  Alternate gorizontal
+nmap <silent> gj :AS<CR>
+" "  Related vertical
+" nmap <silent> go :RV<CR>
+"  Related gorizontal
+nmap <silent> gk :RS<CR>
+"  Find vertical
+nmap <silent> gy :vsplit<CR>gf
+"  Find gorizontal
+nmap <silent> gh :split<CR>gf
+"}}}
 
 " -----------------------------------------------------
 " 2 Disabling arrow keys, space key, exmode enter {{{

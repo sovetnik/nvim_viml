@@ -70,6 +70,10 @@ Plug 'w0rp/ale'
 " Asynchronous runner with quickfix output by :AsyncRun (just like old "!" cmd).
 " Plug 'skywind3000/asyncrun.vim'
 
+" Leverage the power of Vim's compiler plugins without being bound by synchronicity. 
+" Required by vim-test as a strategy
+Plug 'tpope/vim-dispatch'
+
 " Automatically closing pair stuff
 Plug 'cohama/lexima.vim'
 
@@ -104,7 +108,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dyng/ctrlsf.vim'
 
 " REPL for some Languages: Codi
-Plug 'metakirby5/codi.vim'
+" Plug 'metakirby5/codi.vim'
 
 " Search Dash.app from Vim
 Plug 'rizzatti/dash.vim'
@@ -128,6 +132,7 @@ Plug 'baverman/vial-http'
 " Plug 'gabebw/vim-spec-runner'
 " Plug 'thoughtbot/vim-rspec'
 Plug 'vim-test/vim-test'
+let g:test#strategy = 'dispatch'
 "}}}
 
 " -----------------------------------------------------
@@ -135,14 +140,15 @@ Plug 'vim-test/vim-test'
 " -----------------------------------------------------
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
-Plug 'avdgaag/vim-phoenix'
+Plug 'andyl/vim-projectionist-elixir'
+" Plug 'avdgaag/vim-phoenix'
 "}}}
 
 " -----------------------------------------------------
 " Hanami plugins {{{
 " -----------------------------------------------------
-Plug 'sovetnik/vim-hanami'
-Plug 'sovetnik/vim-minispec'
+" Plug 'sovetnik/vim-hanami', { 'for': ['ruby'] }
+" Plug 'sovetnik/vim-minispec', { 'for': ['ruby'] }
 "}}}
 
 " -----------------------------------------------------
@@ -169,17 +175,15 @@ Plug 'mattn/emmet-vim'
 " Ruby / Rails {{{
 " -----------------------------------------------------
 " Ruby support (plays nicely with tpope/rbenv-ctags)
-Plug 'vim-ruby/vim-ruby'
+Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 " RI documentation for Ruby
 " Plug 'danchoi/ri.vim'
 " Slim syntax
-Plug 'slim-template/vim-slim'
+Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 " Rails support (:A, :R, :Rmigration, :Rextract)
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 " Bundler support (plays nicely with tpope/gem-ctags)
 Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
-" Minitest syntax
-Plug 'sunaku/vim-ruby-minitest' 
 "}}}
 
 " -----------------------------------------------------
@@ -187,6 +191,9 @@ Plug 'sunaku/vim-ruby-minitest'
 " -----------------------------------------------------
 "  Api Blueprint (apib)
 Plug 'kylef/apiblueprint.vim'
+
+" Minitest syntax
+Plug 'sunaku/vim-ruby-minitest', { 'for': ['ruby'] }
 
 " CoffeeScript (js)
 Plug 'kchmck/vim-coffee-script'
@@ -215,11 +222,13 @@ Plug 'fatih/vim-nginx'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 " GitHub extension for fugitive.vim
+" Enables :GBrowse from fugitive.vim to open GitHub URLs.
 Plug 'tpope/vim-rhubarb'
 " Merginal aims provide a nice inteface for dealing with Git branches
 " Plug 'idanarye/vim-merginal'
 " Git log viewer (Gitv! for file mode)
-Plug 'gregsexton/gitv', { 'on': 'Gitv' }
+" Plug 'gregsexton/gitv', { 'on': 'Gitv' } # original, unmaintained
+Plug 'sankhesh/gitv', { 'on': 'Gitv' }
 " Git changes showed on line numbers
 " Plug 'airblade/vim-gitgutter'
 Plug 'mhinz/vim-signify'
@@ -239,7 +248,10 @@ call plug#end()
 " ====================================================
 "  Autocommands
 " ====================================================
+filetype plugin indent on
+
 autocmd BufRead /tmp/psql.edit.* set syntax=sql
+autocmd BufNewFile,BufRead *.heex set syntax=html
 
 "open help in right vsplit
 autocmd FileType help wincmd L

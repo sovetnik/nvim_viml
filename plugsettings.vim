@@ -42,12 +42,19 @@ let g:ctrlsf_populate_qflist = 1
 "  defaults for autocomplete
 set completeopt=menu,menuone,preview,noselect,noinsert
 
-" let g:ale_linters = {
-"       \   'elixir': ['credo']
-"       \}
+let g:ale_linters = {
+      \   'elixir': [
+      \      'credo',
+      \      'dialyzer',
+      \      'mix'
+      \   ]
+      \ }
 
 let g:ale_fixers = {
       \   'elixir': [
+      \       'mix_format', 
+      \   ],
+      \   'heex': [
       \       'mix_format', 
       \   ],
       \   'javascript': [
