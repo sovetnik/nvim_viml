@@ -31,6 +31,7 @@ let g:ctrlsf_auto_focus = {
     \ "duration_less_than": 1000
     \ }
 let g:ctrlsf_default_view_mode = 'compact'
+let g:ctrlsf_default_root = 'project'
 let g:ctrlsf_search_mode = 'async'
 let g:ctrlsf_populate_qflist = 1
 
@@ -45,8 +46,10 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_linters = {
       \   'elixir': [
       \      'credo',
-      \      'dialyzer',
-      \      'mix'
+      \      'dialyxir',
+      \      'dogma',
+      \      'elixir-ls', 
+      \      'mix', 
       \   ]
       \ }
 
@@ -77,6 +80,7 @@ let g:ale_fixers = {
       \       'trim_whitespace'
       \   ],
       \   'sql': [
+      \       'pgformatter',
       \       'remove_trailing_lines',
       \       'trim_whitespace'
       \   ],
@@ -90,11 +94,33 @@ let g:ale_fixers = {
       \   ],
       \}
 
+
+" Disable gutter highlighting
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+
+if has('nvim')
+  let s:user_dir = stdpath('config')
+else
+  let s:user_dir = has('win32') ? expand('~/vimfiles') : expand('~/.vim')
+endif
+
+let g:ale_linters_explicit = 1
+let g:ale_elixir_elixir_ls_release = s:user_dir . '/plugged/vim-elixirls/elixir-ls/release'
+
+" " https://github.com/JakeBecker/elixir-ls/issues/54
+" let g:ale_elixir_elixir_ls_config = { 'elixirLS': { 'dialyzerEnabled': v:false } }
+
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_elixir_credo_strict = 1
+let g:ale_fix_on_save = 1
 let g:ale_sign_error = '❯❯'
 let g:ale_sign_warning = '❯'
-let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_sign_highlight_linenrs = 1
+" let g:ale_sql_pgformatter_executable = 'pgformatter'
 " let g:ale_set_loclist = 0
 " let g:ale_set_quickfix = 1
+" let g:ale_virtualtext_cursor = 1
 "}}}
 
 " -----------------------------------------------------

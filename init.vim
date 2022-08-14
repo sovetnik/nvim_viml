@@ -141,6 +141,7 @@ let g:test#strategy = 'dispatch'
 Plug 'elixir-editors/vim-elixir'
 Plug 'slashmili/alchemist.vim'
 Plug 'andyl/vim-projectionist-elixir'
+Plug 'GrzegorzKozub/vim-elixirls', { 'do': ':ElixirLsCompileSync' }
 " Plug 'avdgaag/vim-phoenix'
 "}}}
 
@@ -189,6 +190,8 @@ Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 " -----------------------------------------------------
 " Language highlight {{{
 " -----------------------------------------------------
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
 "  Api Blueprint (apib)
 Plug 'kylef/apiblueprint.vim'
 
@@ -251,7 +254,7 @@ call plug#end()
 filetype plugin indent on
 
 autocmd BufRead /tmp/psql.edit.* set syntax=sql
-autocmd BufNewFile,BufRead *.heex set syntax=html
+autocmd BufNewFile,BufRead *.heex set syntax=eelixir
 
 "open help in right vsplit
 autocmd FileType help wincmd L

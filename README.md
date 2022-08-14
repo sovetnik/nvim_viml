@@ -33,6 +33,13 @@ you should read `:help provider-python` and the [Wiki] (https://github.com/zchee
 
     $ rvm @global do gem install neovim
 
+## Install treesitter languages
+
+  :TSInstall eex
+  :TSInstall elixir
+  :TSInstall erlang
+  :TSInstall ruby
+
 ## Powerline patched font for lightline
 
   https://github.com/powerline/fonts
@@ -40,8 +47,7 @@ you should read `:help provider-python` and the [Wiki] (https://github.com/zchee
 ## Mappings
 
   :map will show all mappings
-  
+
 ## How to use?
 
   It strongly recommended to read all readme for plugins in init.vim
-

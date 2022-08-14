@@ -150,7 +150,7 @@ xnoremap <  <gv
 xnoremap >  >gv
 
 " Quick write buffer
-nnoremap <leader>w :ALEFix<CR>:w<CR>
+nnoremap <leader>w :w<CR>
 
 " Quick quit buffer
 nnoremap <leader>q :q<CR>

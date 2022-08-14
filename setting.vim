@@ -57,5 +57,5 @@ set hidden
 " Live substitution
 set inccommand=nosplit
 
-"}}}
+let g:loaded_perl_provider = 0
 
