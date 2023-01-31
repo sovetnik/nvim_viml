@@ -31,6 +31,10 @@ Plug 'wakatime/vim-wakatime'
 " -----------------------------------------------------
 " Nerdtree file browser
 Plug 'scrooloose/nerdtree', { 'on': ['NERDTreeFind', 'NERDTreeToggle'] }
+" Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+
+" Toggle term
+" Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
 
 " Lightline (simple status line)
 Plug 'itchyny/lightline.vim'
@@ -183,8 +187,6 @@ Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 " Rails support (:A, :R, :Rmigration, :Rextract)
 Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
-" Bundler support (plays nicely with tpope/gem-ctags)
-Plug 'tpope/vim-bundler', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 "}}}
 
 " -----------------------------------------------------
@@ -269,7 +271,7 @@ augroup END
 "open preview in right vsplit
 augroup PreviewAutocmds
   autocmd!
-  autocmd WinEnter * if &previewwindow | wincmd L | endif
+  " autocmd WinEnter * if &previewwindow | wincmd L | endif
 augroup END
 
 " augroup VialHttpSettings

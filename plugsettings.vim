@@ -1,6 +1,8 @@
 " -----------------------------------------------------
 " Common Settings {{{
 " -----------------------------------------------------
+let g:ruby_host_prog = '/Users/sovetnik/.asdf/shims/neovim-ruby-host'
+
 "  Netrw
 let g:netrw_altv          = 1
 let g:netrw_dirhistmax   = 100
@@ -19,6 +21,7 @@ let NERDTreeQuitOnOpen = 1
 let NERDTreeWinSize = 60
 let NERDTreeWinPos = 'right'
 let NERDTreeAutoDeleteBuffer = 1
+let NERDTreeMinimalMenu=1
 " make sure relative line numbers are used
 autocmd FileType nerdtree setlocal relativenumber
 
@@ -50,6 +53,11 @@ let g:ale_linters = {
       \      'dogma',
       \      'elixir-ls', 
       \      'mix', 
+      \   ],
+      \   'ruby': [
+      \       'rubocop',
+      \       'remove_trailing_lines',
+      \       'trim_whitespace'
       \   ]
       \ }
 
