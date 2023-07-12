@@ -1,7 +1,8 @@
 " -----------------------------------------------------
 " Colorscheme settings {{{
 " -----------------------------------------------------
-
+" set termguicolors
+" set background=dark
 colorscheme moonshine
 
 """ Highlighting 

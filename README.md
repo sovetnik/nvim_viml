@@ -29,6 +29,10 @@ you should read `:help provider-python` and the [Wiki] (https://github.com/zchee
 
     $ gem install neovim
 
+    # or with system ruby
+
+    $ sudo gem install neovim
+
     or
 
     $ rvm @global do gem install neovim
@@ -39,6 +43,16 @@ you should read `:help provider-python` and the [Wiki] (https://github.com/zchee
   :TSInstall elixir
   :TSInstall erlang
   :TSInstall ruby
+
+## Language server
+
+  brew install erlang
+
+## CTRLsf backend
+
+  brew install ripgrep
+  or
+  brew install one of them ack/ag/pt/rg
 
 ## Powerline patched font for lightline
 

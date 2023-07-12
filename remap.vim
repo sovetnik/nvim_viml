@@ -70,7 +70,7 @@ nmap <silent> <leader>d <Plug>DashSearch
 " nmap <silent> ?? :te translate <cword><CR><CR>
 
 " -----------------------------------------------------
-" 1.7 Ag Actions {{{
+" 1.7 Search Actions {{{
 " -----------------------------------------------------
 " use * to search current word in normal mode
 nmap \ <Plug>CtrlSFPrompt

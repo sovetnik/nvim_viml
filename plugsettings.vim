@@ -1,7 +1,10 @@
 " -----------------------------------------------------
 " Common Settings {{{
 " -----------------------------------------------------
-let g:ruby_host_prog = '/Users/sovetnik/.asdf/shims/neovim-ruby-host'
+" For system neovim via sudo gem install neovim
+" let g:ruby_host_prog = '/usr/local/bin/neovim-ruby-host'
+" For asdf neovim via ruby from asdf
+" let g:ruby_host_prog = '/Users/sovetnik/.asdf/shims/neovim-ruby-host'
 
 "  Netrw
 let g:netrw_altv          = 1
@@ -48,10 +51,10 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 
 let g:ale_linters = {
       \   'elixir': [
-      \      'credo',
-      \      'dialyxir',
-      \      'dogma',
       \      'elixir-ls', 
+      \      'dialyxir',
+      \      'credo',
+      \      'dogma',
       \      'mix', 
       \   ],
       \   'ruby': [
@@ -71,6 +74,11 @@ let g:ale_fixers = {
       \   'javascript': [
       \       'eslint', 
       \       'prettier'
+      \   ],
+      \   'lua': [
+      \       'lua-format', 
+      \       'remove_trailing_lines',
+      \       'trim_whitespace'
       \   ],
       \   'markdown': [
       \       'prettier',
@@ -149,8 +157,6 @@ let g:buffergator_vsplit_size = 50
 let g:deoplete#enable_at_startup=1
 call deoplete#custom#option('refresh_always', v:false)
 call deoplete#custom#source('_', 'buffer', 'file', 'ultisnips')
-call deoplete#custom#source('ruby', 'buffer', 'member', 'file', 'ultisnips')
-call deoplete#custom#source('vim', 'buffer', 'member', 'file', 'ultisnips')
 " }}}
 
 " -----------------------------------------------------

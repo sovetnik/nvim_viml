@@ -1,23 +1,36 @@
 " Plugin manager (Plug) settings Autoinstall {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  silent !:
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 " }}}
 
-if !has('nvim')
-    Plug 'rhysd/vim-healthcheck'
-endif
 
 " ALE completion must be set before load ALE
 " let g:ale_completion_enabled = 1
 
 call plug#begin('~/.config/nvim/plugged')
+if !has('nvim')
+    Plug 'rhysd/vim-healthcheck'
+endif
+
 " -----------------------------------------------------
 " Colorschemes {{{
 " -----------------------------------------------------
-Plug 'KKPMW/moonshine-vim'
+" Plug 'KKPMW/moonshine-vim'
+Plug 'karoliskoncevicius/moonshine-vim'
+" Plug 'ayu-theme/ayu-vim'
+" Plug 'savq/melange-nvim'
+" Plug 'rebelot/kanagawa.nvim'
+" Plug 'ajmwagar/vim-deus'
+" Plug 'doums/darcula'
+" Plug 'habamax/vim-alchemist'
+" Plug 'morhetz/gruvbox'
+" Plug 'luisiacc/gruvbox-baby'
+" Plug 'ackyshake/Spacegray.vim'
+" Plug 'savq/melange-nvim'
+" Plug 'novasenco/vulpo'
+" Plug 'srcery-colors/srcery-vim'
 "}}}
 
 " -----------------------------------------------------
@@ -53,20 +66,21 @@ Plug 'rbgrouleff/bclose.vim'
 "}}}
 
 " -----------------------------------------------------
-" Autocomplete plugins {{{
-" -----------------------------------------------------
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-" Plug 'uplus/deoplete-solargraph'
-" Plug 'fishbullet/deoplete-ruby'
-" Plug 'Shougo/neco-syntax'
-" Plug 'Shougo/neco-vim'
-"}}}
-
-" -----------------------------------------------------
 " Language agnostic plugins {{{
 " -----------------------------------------------------
 " Asynchronous Lint Engine
 Plug 'w0rp/ale'
+
+" " async language server protocol plugin for vim and neovim
+" Plug 'prabirshrestha/vim-lsp'
+" " Auto configurations for Language Server for vim-lsp
+" Plug 'mattn/vim-lsp-settings'
+
+" Dark powered asynchronous completion framework for neovim/Vim8
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
+" " deoplete source for vim-lsp
+" Plug 'lighttiger2505/deoplete-vim-lsp'
 
 " Asynchronous maker and linter (needs linters to work)
 " Plug 'neomake/neomake'
@@ -181,8 +195,6 @@ Plug 'mattn/emmet-vim'
 " -----------------------------------------------------
 " Ruby support (plays nicely with tpope/rbenv-ctags)
 Plug 'vim-ruby/vim-ruby', { 'for': ['ruby'] }
-" RI documentation for Ruby
-" Plug 'danchoi/ri.vim'
 " Slim syntax
 Plug 'slim-template/vim-slim', { 'for': ['slim'] }
 " Rails support (:A, :R, :Rmigration, :Rextract)
@@ -194,20 +206,11 @@ Plug 'tpope/vim-rails', { 'for': ['ruby', 'eruby', 'haml', 'slim'] }
 " -----------------------------------------------------
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
-"  Api Blueprint (apib)
-Plug 'kylef/apiblueprint.vim'
-
 " Minitest syntax
 Plug 'sunaku/vim-ruby-minitest', { 'for': ['ruby'] }
 
-" CoffeeScript (js)
-Plug 'kchmck/vim-coffee-script'
-
 " Preview colours in source code while editing
 Plug 'ap/vim-css-color'
-
-" JavaScript
-Plug 'pangloss/vim-javascript'
 
 " Vue.js component
 Plug 'posva/vim-vue'
@@ -226,11 +229,11 @@ Plug 'fatih/vim-nginx'
 " -----------------------------------------------------
 " Fugitive
 Plug 'tpope/vim-fugitive'
+
 " GitHub extension for fugitive.vim
 " Enables :GBrowse from fugitive.vim to open GitHub URLs.
 Plug 'tpope/vim-rhubarb'
-" Merginal aims provide a nice inteface for dealing with Git branches
-" Plug 'idanarye/vim-merginal'
+
 " Git log viewer (Gitv! for file mode)
 " Plug 'gregsexton/gitv', { 'on': 'Gitv' } # original, unmaintained
 Plug 'sankhesh/gitv', { 'on': 'Gitv' }
@@ -273,18 +276,6 @@ augroup PreviewAutocmds
   autocmd!
   " autocmd WinEnter * if &previewwindow | wincmd L | endif
 augroup END
-
-" augroup VialHttpSettings
-"     au!
-"     au BufNewFile __vial_http__ nnoremap <buffer> <silent> <}> :b __vial_http_req__<cr>
-"     au BufNewFile __vial_http__ nnoremap <buffer> <silent> <{> :b __vial_http_raw__<cr>
-"     au BufNewFile __vial_http_req__ nnoremap <buffer> <silent> <}> :b __vial_http_hdr__<cr>
-"     au BufNewFile __vial_http_req__ nnoremap <buffer> <silent> <{> :b __vial_http__<cr>
-"     au BufNewFile __vial_http_hdr__ nnoremap <buffer> <silent> <}> :b __vial_http_raw__<cr>
-"     au BufNewFile __vial_http_hdr__ nnoremap <buffer> <silent> <{> :b __vial_http_req__<cr>
-"     au BufNewFile __vial_http_raw__ nnoremap <buffer> <silent> <}> :b __vial_http__<cr>
-"     au BufNewFile __vial_http_raw__ nnoremap <buffer> <silent> <{> :b __vial_http_hdr__<cr>
-" augroup END
 
 " ====================================================
 "  Basic settings 
